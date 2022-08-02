@@ -11,7 +11,13 @@
 
     <!-- JS -->
     <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/course.js" defer></script>
+
+
+    <!-- CDN -->
+    <!-- JQUERY UI -->
+    <script src="./assets/plugins/jQueryUI/jquery-ui.min.js"></script>
+
+    
     <title>AGI Store</title>
 </head>
 <body>
@@ -30,89 +36,105 @@
                     </form>
                 </div>
                 <div class="courses_type">
-                    <div class="buttons">
-                        <div class="button course_type_button armorer">
-                            <div class="icon">
-                                <img src="./assets/images/letter.png" alt="letterIcon">
-                                <img src="./assets/images/letter_H.png" alt="letterIcon">
-                            </div>
-                            <div class="label">ARMORER'S COURSES</div>
+                    <ul class="buttons tabs">
+                        
+                        <li class="button course_type_button armorer">
+                            <a href="#tab1">
+                                <div class="icon">
+                                    <img src="./assets/images/letter.png" alt="letterIcon">
+                                    <img src="./assets/images/letter_H.png" alt="letterIcon">
+                                </div>
+                                <div class="label">ARMORER'S COURSES</div>
+                            </a>
+                        </li>
+                        <li class="button course_type_button customizing">
+                            <a href="#tab2">
+                                <div class="icon">
+                                    <img src="./assets/images/Book.png" alt="bookIcon">
+                                    <img src="./assets/images/Book_H.png" alt="bookIcon">
+                                </div>
+                                <div class="label">CUSTOMIZING COURSES</div>
+                            </a>
+                        </li>
+                        <li class="button course_type_button certified">
+                            <a href="#tab3">
+                                <div class="icon">
+                                    <img src="./assets/images/Books.png" alt="booksIcon">
+                                    <img src="./assets/images/Books_H.png" alt="booksIcon">
+                                </div>
+                                <div class="label">CERTIFIED COURSES</div>
+                            </a>
+                        </li>
+                        <li class="button course_type_button all">
+                            <a href="#tab4">
+                                <div class="icon">
+                                    <img src="./assets/images/shop.png" alt="shopIcon">
+                                    <img src="./assets/images/shop_H.png" alt="shopIcon">
+                                </div>
+                                <div class="label">ALL COURSES</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="course course_armorer tab_content" id="tab1">
+                        <div class="thumbnail">
+                            <img src="./assets/images/Course1.png" alt="Course Image">
                         </div>
-                        <div class="button course_type_button customizing">
-                            <div class="icon">
-                                <img src="./assets/images/Book.png" alt="bookIcon">
-                                <img src="./assets/images/Book_H.png" alt="bookIcon">
+                        <div class="details">
+                            <h1 class="heading">COURSE OF THE MONTH</h1>
+                            <div class="text">
+                                The American Gunsmithing Institute is the premier source for how-to gunsmithing courses on Online & DVD. American Gunsmithing Institute exists to provide firearm enthusiasts with the knowledge needed to keep their guns in safe and top-notch condition, maximizing their shooting experience and potential in a way that preserves the Gunsmithing art and ensures “that the right of the people to keep and bear arms shall not be infringed.”
                             </div>
-                            <div class="label">CUSTOMIZING COURSES</div>
-                        </div>
-                        <div class="button course_type_button certified">
-                            <div class="icon">
-                                <img src="./assets/images/Books.png" alt="booksIcon">
-                                <img src="./assets/images/Books_H.png" alt="booksIcon">
-                            </div>
-                            <div class="label">CERTIFIED COURSES</div>
-                        </div>
-                        <div class="button course_type_button all">
-                            <div class="icon">
-                                <img src="./assets/images/shop.png" alt="shopIcon">
-                                <img src="./assets/images/shop_H.png" alt="shopIcon">
-                            </div>
-                            <div class="label">ALL COURSES</div>
+                            <button class="button_blue button_radius">Get it Now!</button>
                         </div>
                     </div>
-                    <div class="course_detail">
-                        <div class="course course_armorer">
-                            <div class="thumbnail">
-                                <img src="./assets/images/Course1.png" alt="Course Image">
-                            </div>
-                            <div class="details">
-                                <h1 class="heading">COURSE OF THE MONTH</h1>
-                                <div class="text">
-                                    The American Gunsmithing Institute is the premier source for how-to gunsmithing courses on Online & DVD. American Gunsmithing Institute exists to provide firearm enthusiasts with the knowledge needed to keep their guns in safe and top-notch condition, maximizing their shooting experience and potential in a way that preserves the Gunsmithing art and ensures “that the right of the people to keep and bear arms shall not be infringed.”
-                                </div>
-                                <button class="button_blue button_radius">Get it Now!</button>
-                            </div>
+                    <div class="course course_customizing tab_content" id="tab2">
+                        <div class="thumbnail">
+                            <img src="./assets/images/Course1.png" alt="Course Image">
                         </div>
-                        <div class="course course_customizing">
-                            <div class="thumbnail">
-                                <img src="./assets/images/Course1.png" alt="Course Image">
+                        <div class="details">
+                            <h1 class="heading">COURSE CUSTOMIZING</h1>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
                             </div>
-                            <div class="details">
-                                <h1 class="heading">COURSE CUSTOMIZING</h1>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
-                                </div>
-                                <button class="button_blue button_radius">Get it Now!</button>
-                            </div>
-                        </div>
-                        <div class="course course_certified">
-                            <div class="thumbnail">
-                                <img src="./assets/images/Course1.png" alt="Course Image">
-                            </div>
-                            <div class="details">
-                                <h1 class="heading">COURSE CERTIFIED</h1>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
-                                </div>
-                                <button class="button_blue button_radius">Get it Now!</button>
-                            </div>
-                        </div>
-                        <div class="course course_All">
-                            <div class="thumbnail">
-                                <img src="./assets/images/Course1.png" alt="Course Image">
-                            </div>
-                            <div class="details">
-                                <h1 class="heading">COURSE ALL</h1>
-                                <div class="text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
-                                </div>
-                                <button class="button_blue button_radius">Get it Now!</button>
-                            </div>
+                            <button class="button_blue button_radius">Get it Now!</button>
                         </div>
                     </div>
+                    <div class="course course_certified tab_content" id="tab3">
+                        <div class="thumbnail">
+                            <img src="./assets/images/Course1.png" alt="Course Image">
+                        </div>
+                        <div class="details">
+                            <h1 class="heading">COURSE CERTIFIED</h1>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
+                            </div>
+                            <button class="button_blue button_radius">Get it Now!</button>
+                        </div>
+                    </div>
+                    <div class="course course_Allv tab_content" id="tab4">
+                        <div class="thumbnail">
+                            <img src="./assets/images/Course1.png" alt="Course Image">
+                        </div>
+                        <div class="details">
+                            <h1 class="heading">COURSE ALL</h1>
+                            <div class="text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, debitis.
+                            </div>
+                            <button class="button_blue button_radius">Get it Now!</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </div>
+    <script>
+        $(document).ready(
+            function()
+            {
+                $('.courses_type').tabs();
+            }
+        )
+    </script>
 </body>
 </html>

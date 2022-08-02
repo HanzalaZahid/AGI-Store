@@ -13,11 +13,12 @@
         {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 100px;
+            
             .button
             {
+                
                 cursor: pointer;
-                font-family: bebas-neue-pro-expanded, sans-serif;
-                font-weight: 600;
                 border: 1px solid $colorBlue;
                 display: flex;
                 justify-content: center;
@@ -29,103 +30,194 @@
                 {
                     margin-right: 0;
                 }
-                .icon
-                {
-                    margin-right: 22px;
-                    height: 48px;
-                    width: 48px;
-                    img
-                    {
-                        max-height: 100%;
-                        &:last-child
-                        {
-                            display: none;
-                        }
-                    }
-                }
-                .label
-                {
-                    word-spacing: 1000px;
-                    margin: auto;
-                }
+
                 &:hover
                 {
                     background-color: $colorBlue;
-                    color: white;
+                    a
+                    {
+                        .label
+                        {
+                            color: white;
+                        }
+                        .icon
+                        {
+                            img
+                            {
+                                &:last-child
+                                {
+                                    display: block;
+                                }
+                                &:first-child
+                                {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                a
+                {
+                    font-family: bebas-neue-pro-expanded, sans-serif;
+                    font-weight: 600;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     .icon
                     {
+                        margin-right: 22px;
+                        height: 48px;
+                        width: 48px;
                         img
                         {
+                            max-height: 100%;
                             &:last-child
-                            {
-                                display: block;
-                            }
-                            &:first-child
                             {
                                 display: none;
                             }
                         }
                     }
+                    .label
+                    {
+                        word-spacing: 1000px;
+                        margin: auto;
+                        color: $colorBlue;
+                    }
                 }
             }
-        }
-        .course_detail
-        {
-            margin-top: 100px;
-            .course
+            @media screen and (max-width: 1098px)
             {
-                display: none;
-                &:first-child
+                .button
                 {
-                    display: flex;
+                    font-size: 26px;
+                    .icon
+                    {
+                        height: 40px;
+                        width : 40px;
+                    }
                 }
-                background-color: #f7f8fa;
-                padding: 32px;
+            }
+            @media screen and (max-width: 991px)
+            {
+                .button
+                {
+                    font-size: 24px;
+                    .icon
+                    {
+                        height: 40px;
+                        width : 40px;
+                    }
+                }
+            }
+            @media screen and (max-width: 888px) {
+                .button
+                {
+                    width: 48%;
+                    margin-bottom: 22px;
+                }
+
+            }
+            @media screen and (max-width: 575.98px)
+            {
+                &
+                {
+                    flex-flow: column nowrap;
+                    .button
+                    {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+            
+        }
+        @media screen and (max-width: 888px) {
+            .buttons
+            {
+                flex-wrap: wrap;
+            }
+        }
+        margin-top: 100px;
+        .course
+        {
+            display: flex;
+            background-color: #f7f8fa;
+            padding: 32px;
+            >.thumbnail
+            {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img
+                {
+                    max-height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            >.details
+            {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                padding-bottom: 23px;
+                width: 60%;
+                .heading
+                {
+                    @include bebas;
+                    color: $colorBlue;
+                    font-size: 56px;
+                    margin-top: -56px;
+                }
+                .text
+                {
+                    font-size: 16px;
+                    font-family: acumin-pro, sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $colorBlueSecondary;
+                    line-height: 32px;
+                    
+                }
+                button
+                {
+                    @include sans;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 15px;
+                    width: 169px;
+                }
+            }
+            @media screen and (max-width: 888px)
+            {
+                >.thumbnail, >.details
+                {
+                    width: 100%;
+                }
                 >.thumbnail
                 {
-                    width: 40%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    img
-                    {
-                        max-height: 100%;
-                        object-fit: contain;
-                        object-position: center;
-                    }
+                    margin-bottom: 12px;
                 }
                 >.details
                 {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: space-between;
-                    padding-bottom: 23px;
-                    width: 60%;
+                    align-items: center;
+                    padding-bottom: 0;
                     .heading
                     {
-                        @include bebas;
-                        color: $colorBlue;
-                        font-size: 56px;
-                        margin-top: -56px;
+                        margin: 0;
+                        text-align: center;
                     }
                     .text
                     {
-                        font-size: 16px;
-                        font-family: acumin-pro, sans-serif;
-                        font-weight: 400;
-                        font-style: normal;
-                        color: $colorBlueSecondary;
-                        line-height: 32px;
-                        
+                        padding: 32px 0px;
+                        text-align: center;
                     }
-                    button
-                    {
-                        @include sans;
-                        font-size: 16px;
-                        font-weight: 600;
-                        padding: 15px;
-                        width: 169px;
-                    }
+                }
+                &
+                {
+                    flex-wrap: wrap;
                 }
             }
         }
