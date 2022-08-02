@@ -8,7 +8,7 @@
 {
     .courses_type
     {
-        margin-top: 100px;
+        margin-top: $sectionTopMargin;
         .buttons
         {
             display: flex;
@@ -126,7 +126,6 @@
                     .button
                     {
                         width: 100%;
-                        justify-content: center;
                     }
                 }
             }
@@ -218,6 +217,99 @@
                 &
                 {
                     flex-wrap: wrap;
+                }
+            }
+
+        }
+    }
+}
+
+.courses_grid
+{
+    .section_wrapper
+    {
+        margin-top: $sectionTopMargin;
+        .course_cards_container
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .course_item
+            {
+                display: flex;
+                padding: 12px 14px;
+                margin-bottom: 32px;
+                width: 31.9%;
+
+                .thumbnail
+                {
+                    max-width: 50%;
+                    img
+                    {
+                        width: 100%;
+                        object-fit: contain;object-position: center;
+                    }
+                }
+                .details
+                {
+                    max-width: 50%;
+                    padding: 14px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    .title
+                    {
+                        color: $colorBlueSecondary;
+                        @include acumin;
+                        font-size: 22px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover
+                        {
+                            text-decoration: underline;
+                        }
+                    }
+                    .catagory
+                    {
+                        font-size: 16px;
+                        @include sans;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                    .price
+                    {
+                        color: $colorRedSecondary;
+                        font-size: 20px;
+                        @include acumin;
+                        
+                    }
+                    .options
+                    {
+                        display: flex;
+                        align-items: center;
+                        .add_to_card
+                        {
+                            @include acumin;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-size: 14px;
+                            padding: 9.5px 12px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 18px;
+                        }
+                        .heart
+                        {
+                            font-size: 20px;
+                            cursor: pointer;
+                            color: #959EAD;
+                            &:hover
+                            {
+                                color: $colorRed;
+                            }
+                        }
+                    }
                 }
             }
         }

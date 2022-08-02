@@ -27,6 +27,17 @@ body>.body_content>section
     display: flex;
     justify-content: center;
     padding: 0px 32px;
+    .section_wrapper
+    {
+        .section_title
+        {
+            text-transform: uppercase;
+            @include bebas;
+            color: $colorBlue;
+            font-size: 36px;
+            padding: 36px 0px;
+        }
+    }
 }
 
 .blue_red_gradient
@@ -94,6 +105,10 @@ button
 {
     border-radius: 4px;
 }
+.button_round
+{
+    border-radius: 18px;
+}
 .button_blue
 {
     background-color: $colorBlue;
@@ -101,7 +116,12 @@ button
     border: none;
     outline: none;
 }
-
+.card
+{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 0px #959ead;
+}
 
 @media screen and (max-width: 3500px)
 {
