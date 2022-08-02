@@ -229,18 +229,79 @@
     .section_wrapper
     {
         margin-top: $sectionTopMargin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .course_cards_container
         {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            width: 100%;
             .course_item
             {
                 display: flex;
                 padding: 12px 14px;
                 margin-bottom: 32px;
                 width: 31.9%;
-
+                @media screen and (max-width: 994px)
+                {
+                    flex-flow: column nowrap;
+                    &
+                    {
+                        .thumbnail, .details
+                        {
+                            max-width: unset!important;
+                        }
+                        .details
+                        {
+                            padding: 12px 0px!important;
+                            >*
+                            {
+                                margin-bottom: 12px;
+                            }
+                            >*:last-child
+                            {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: 650px)
+                {
+                    &
+                    {
+                        width: 100%;
+                        .details
+                        {
+                            .title
+                            {
+                                font-size: 26px!important;
+                            }
+                            .catagory
+                            {
+                                font-size: 18px!important;
+                            }
+                            .price
+                            {
+                                font-size: 22px!important;
+                            }
+                            .options
+                            {
+                                button
+                                {
+                                    font-size: 18px!important;
+                                    padding-left: 28px!important;
+                                    padding-right: 28px!important;
+                                }
+                                .heart
+                                {
+                                    margin: 0!important;
+                                }
+                            }
+                        }
+                    }
+                }
                 .thumbnail
                 {
                     max-width: 50%;
@@ -257,6 +318,14 @@
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-between;
+                    @media screen and (max-width: 1092px)
+                    {
+                        &
+                        {
+                            padding: 0;
+                            padding-left: 14px;
+                        }
+                    }
                     .title
                     {
                         color: $colorBlueSecondary;
@@ -287,6 +356,14 @@
                     {
                         display: flex;
                         align-items: center;
+                        @media screen and (max-width: 1151px)
+                        {
+                            flex-wrap: wrap-reverse;
+                            & .heart
+                            {
+                                margin-bottom: 8px;
+                            }
+                        }
                         .add_to_card
                         {
                             @include acumin;
@@ -310,6 +387,231 @@
                             }
                         }
                     }
+                }
+            }
+        }
+        >.course_catalog
+        {
+            font-size: 22px;
+            @include acumin;
+            font-weight: 600;
+            width: 34%;
+            padding: 25px 0px;
+            margin-top: 48px;
+            @media screen and (max-width: 992px)
+           {
+                &
+                {
+                    width: 300px;
+                }
+           }
+           @media screen and (max-width: 767px)
+           {
+                width: 100%;
+           }
+        }
+    }
+}
+
+.our_story
+{
+    .section_wrapper
+    {
+        width: 88%!important;
+        margin-top: $sectionTopMargin;
+        .top
+        {
+            display: flex;
+            flex-direction: row nowrap;
+            align-items: center;
+            margin-bottom: 48px;
+            @media screen and (max-width: 768px)
+            {
+                &
+                {
+                    flex-direction: column;
+                    .title
+                    {
+                        min-width: unset!important;
+                        margin-bottom: 22px;
+                        text-align: center;
+                    }
+                    .details
+                    {
+                        text-align: center
+                    }
+
+                }
+            }
+            .title
+            {
+                @include bebas;
+                font-size: 56px;
+                font-weight: 600;
+                color: $colorBlue;
+                min-width: 400px;
+                @media screen and(max-width: 992px)
+                {
+                    &
+                    {
+                        min-width: 300px;
+                    }
+                }
+            }
+            .details
+            {
+                line-height: 36px;
+                @include acumin;
+                font-size: 16px;
+                color: $colorBlueSecondary;
+            }
+        }
+        .bottom
+        {
+           .video
+           {
+            position: relative;
+            img
+            {
+                width: 100%;
+            }
+            .video_icon
+            {
+                cursor: pointer;
+                height: 100px;
+                width: 100px;
+                @media screen and (max-width: 768px)
+                {
+                    &
+                    {
+                        height: 64px;
+                        width: 64px;
+                        *
+                        {
+                            font-size: 20px!important;
+                        }
+                    }
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: absolute;
+                margin: auto;
+                background-color: white;
+                *
+                {
+                    color: #1565D8;
+                    font-size: 34px;
+                }
+                &:hover
+                {
+                    background-color: $colorBlue;
+                    *
+                    {
+                        color: white;
+                    }
+                }
+            }
+            
+           }
+            
+        }
+    }
+}
+
+.join_us
+{
+    background-color: $colorBlue;
+    margin-top: $sectionTopMargin;
+    .section_wrapper
+    {
+        padding: 48px 0px;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 767px)
+        {
+            flex-direction: column;
+            &
+            {
+                .left
+                {
+                    padding-right: 0 !important;
+                    margin-bottom: 22px;
+                    width: unset!important;
+                }
+                .right
+                {
+                    width: unset!important;
+                }
+            }
+        }
+        .left
+        {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 32px;
+            *
+            {
+                color: white;
+                text-align: center;
+            }
+            .logo
+            {
+                width: 84px;
+                img
+                {
+                    max-width: 100%;
+                }
+            }
+            .text
+            {
+                @include acumin;
+                font-size: 28px;
+                span
+                {
+                    display: block;
+                    font-size: 77px;
+                    @include bebas;
+                    font-weight: 600;
+                    word-spacing: 1000rem;
+                }
+                @media screen and (max-width:992px)
+                {
+                    &
+                    {
+                        font-size: 24px;
+                        span
+                        {
+                            font-size: 54px;
+                        }
+                    }
+                }
+            }
+            .learn_more
+            {
+                font-size: 15px;
+                padding: 17px 48px;
+                width: 213px;
+                margin-top: 22px;
+            }
+        }
+        .right
+        {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            .thumbnail
+            {
+                img
+                {
+                    max-width: 100%;
                 }
             }
         }
