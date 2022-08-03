@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/collection.css">
+        <!-- JS -->
+        <script src="./assets/js/jquery.js"></script>
+        <script src="./assets/js/nav.js"></script>
+
+        <!-- CDN -->
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- JQUERY UI -->
+        <script src="./assets/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <title>Collection</title>
+</head>
+<body>
+    <!-- HEADER GOES HERE -->
+    <!-- HEADER GOES HERE -->
+    <div class="body_content">
+        <section class="banner">
+            <div class="section_wrapper">
+                <h1 class="page_title">
+                    ALL COURSES
+                </h1>
+            </div>
+        </section>
+        <section class="search">
+            <div class="section_wrapper">
+                <div class="search_container">
+                    <form action="" class="search_courses">
+                        <input type="text" name="searchCourse" id="searchCourse" placeholder="Search for Courses">
+                        <button type="submit" class="button_blue">SEARCH</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="courses_and_nav">
+            <div class="section_wrapper">
+                <div class="catagories">
+                    <div class="head">
+                        <h2 class="title">CATAGORIES</h2>
+                    </div>
+                    <div class="nav_list">
+                        <ul class="list">
+                            <li>
+                                <a href="#"><span>AGI Certified Gunsmithing Courses</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>AGI Logo Gear</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Armorer’s Courses</span><i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="subnav">
+                                    <li><a href="">Handguns</a></li>
+                                    <li><a href="">Machine Gun</a></li>
+                                    <li><a href="">Rifles</a></li>
+                                    <li><a href="">Rimfires</a></li>
+                                    <li><a href="">Shotguns</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Books</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Building & Customizing Courses</span><i class="fa-solid fa-caret-down"></i></a>
+                                <ul class="subnav">
+                                    <li><a href="">Handguns</a></li>
+                                    <li><a href="">Machine Gun</a></li>
+                                    <li><a href="">Rifles</a></li>
+                                    <li><a href="">Rimfires</a></li>
+                                    <li><a href="">Shotguns</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Disassembly & Reassembly Courses</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Refinishing Metal & Wood</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Reloading</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Shooting Technique</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Miscellaneous</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="courses">
+                    <div class="head">
+                        <h1 class="title">ALL COURSES</h1>
+                        <div class="options">
+                            <select title="Courses Filter Options" name="filter" id="filter" class="filter">
+                                <option value="">Filter</option>
+                                <option value="">filter</option>
+                                <option value="">filter</option>
+                            </select>
+                            <select title="Courses Sort Options" name="sort" id="sort" class="sort">
+                                <option value="">Sort</option>
+                                <option value="">sort</option>
+                                <option value="">sort</option>
+                            </select>
+                            <div class="course_items">
+                                <span class="amount">117</span>
+                                <span>items</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses_grid">
+                        <div class="grid_container">
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+                            <a href="" class="course card">
+                                <div class="thumbnail">
+                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                </div>
+                                <h3 class="title">Beretta PX4 Storm Pistol</h3>
+                                <div class="price">$25.00</div>
+                                <div class="catagory">Armorer</div>
+                                <div class="options">
+                                    <button class="button_round button_blue add_to_cart">Add to Cart</button>
+                                    <div class="heart"><i class="fa-solid fa-heart"></i></div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <button class="button_blue button_radius">MORE RECOMMENDATIONS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FOOTER GOES HERE -->
+    <!-- FOOTER GOES HERE -->
+</body>
+</html>

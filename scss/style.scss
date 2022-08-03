@@ -39,7 +39,29 @@ body>.body_content>section
         }
     }
 }
-
+.rotate
+{
+    transition: all ease .2s;
+    transform: rotate(180deg);
+}
+.banner
+{
+    background-image: $gradientRedBlue;
+    padding-top: 48px!important;
+    padding-bottom: 62px!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .page_title
+    {
+        @include bebas;
+        font-size: 54px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
 .blue_red_gradient
 {
     background-image: $gradientRedBlue;

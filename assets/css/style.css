@@ -34,6 +34,37 @@ body > .body_content > section .section_wrapper .section_title {
   padding: 36px 0px;
 }
 
+.rotate {
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.banner {
+  background-image: -webkit-gradient(linear, left top, right top, from(#C9121C), color-stop(#C9121C), to(#0D2647));
+  background-image: linear-gradient(90deg, #C9121C, #C9121C, #0D2647);
+  padding-top: 48px !important;
+  padding-bottom: 62px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.banner .page_title {
+  font-family: bebas-neue-pro-expanded, sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .blue_red_gradient {
   background-image: -webkit-gradient(linear, left top, right top, from(#C9121C), color-stop(#C9121C), to(#0D2647));
   background-image: linear-gradient(90deg, #C9121C, #C9121C, #0D2647);

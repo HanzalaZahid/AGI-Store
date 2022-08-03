@@ -1,0 +1,315 @@
+@import "./variables";
+@import "./mixins";
+
+.courses_and_nav
+{
+    .section_wrapper
+    {
+        padding-top: $sectionTopMargin;
+        display: flex;
+        justify-content: space-between;
+        .catagories
+        {
+            max-width: 34%;
+            @media screen and (max-width: 1110px)
+            {
+                max-width: unset;
+                padding-right: 28px;
+            }
+            flex-grow: 1;
+            .nav_list
+            {
+                .list
+                {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    width: 300px;
+                    *
+                    {
+                        color: #606060;
+                    }
+                    >li
+                    {
+                        border-bottom: 1px solid #606060;
+                        display: flex;
+                        flex-direction: column;
+                        >a
+                        {
+                            @include sans;
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding: 16px 0px;
+                            
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: space-between;
+                            transition: all ease .2s;
+                            &:hover
+                            {
+                                margin-left: 8px;
+                            }
+                            i
+                            {
+                                margin-right: 12px;
+                                height: 22px;
+                                width: 22px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                &:hover
+                                {
+                                    background-color: #75757534;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                        ul
+                        {
+                            list-style-type: none;
+                            margin-left: 30px;
+                            display: none;
+                            flex-direction: column;
+                            li
+                            {
+                                a
+                                {
+                                    text-decoration: none;
+                                    font-size: 16px;
+                                    @include sans;
+                                    font-weight: 600;
+                                    display: block;
+                                    padding: 15px 0px;
+                                    transition: all ease .2s;
+                                    &:hover
+                                    {
+                                        margin-left: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .courses
+        {
+            width: 100% - 34%;
+            max-width: 100% - 34%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            flex-grow: 1;
+            .courses_grid
+            {
+                .grid_container
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin-bottom: 22px;
+                    .course
+                    {
+                        
+                        text-decoration: none;
+                        padding: 22px;
+                        margin-bottom: 28px;
+                        width: 28%;
+                        .thumbnail
+                        {
+                            img
+                            {
+                                width: 100%;
+                                object-fit: contain;
+                                object-position: center
+                            }
+                        }
+                        .title
+                        {
+                            @include acumin;
+                            font-size: 22px;
+                            color: $colorBlueSecondary;
+                            line-height: 1.4;
+                            padding: 8px 0px;
+                            &:hover
+                            {
+                                text-decoration: underline;
+                            }
+                        }
+                        .price
+                        {
+                            color: $colorRedSecondary;
+                            font-size: 16px;
+                            font-weight: 600;
+                            @include acumin;
+                            line-height: 1.5;
+                        }
+                        .catagory
+                        {
+                            @include sans;
+                            font-size: 12px;
+                            color: $colorBlueSecondary;
+                            line-height: 2;
+                            
+                        }
+                        .options
+                        {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 12px;
+                            button
+                            {
+                                font-size: 16px;
+                                @include acumin;
+                                font-weight: 600;
+                                padding: 10px 22px;
+                                margin-right: 12px;
+                            }
+                            .heart
+                            {
+                                color: #959EAD;
+                                font-size: 24px;
+                                &:hover
+                                {
+                                    color: $colorRedSecondary;
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 1230px)
+                        {
+                            &
+                            {
+                                width: 31%;
+                            }
+                            .title
+                            {
+                                font-size: 18px;
+                            }
+                            .price
+                            {
+                                font-size: 14px;
+                            }
+                            .catagory
+                            {
+                                font-size: 10px;
+                            }
+                            .options
+                            {
+                                button
+                                {
+                                    font-size: 14px;
+                                }
+                                .heart
+                                {
+
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 1110px)
+                        {
+                            &
+                            {
+                                width: 48%;
+                            }
+                            .title
+                            {
+                                font-size: 22px;
+                            }
+                            .price
+                            {
+                                font-size: 16px;
+                            }
+                            .catagory
+                            {
+                                font-size: 12px;
+                            }
+                            .options
+                            {
+                                button
+                                {
+                                    font-size: 14px;
+                                }
+                                .heart
+                                {
+
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 830px)
+                        {
+                            &
+                            {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                >button
+                {
+                    font-size: 22px;
+                    @include acumin;
+                    font-weight: 600px;
+                    color: white;
+                    width: 100%;
+                    padding: 26px;
+                    border-radius: 8px;
+                }
+            }
+
+        }
+        .head
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 28px;
+            @media screen and (max-width: 992px)
+            {
+                &
+                {
+                    flex-direction: column;
+                    align-items: center;
+                    .options
+                    {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                    .title
+                    {
+                        padding-bottom: 28px;
+                    }
+                }
+            }
+            .title
+            {
+                font-size: 36px;
+                font-weight: 600;
+                @include bebas;
+                color: $colorBlue;
+            }
+            .options
+            {
+                display: flex;
+                align-items: center;
+                >*
+                {
+                    margin-right: 8px;
+                    @include karla;
+                    font-size: 14px;
+                }
+                select
+                {
+                    width: 99px;
+                    cursor: pointer;
+                }
+                .course_items
+                {
+                    margin-left: 24px;
+                    color: #757575;
+                }
+            }
+        }
+    }
+}
