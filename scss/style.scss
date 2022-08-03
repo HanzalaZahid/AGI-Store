@@ -129,7 +129,41 @@ button
     border-radius: 8px;
     box-shadow: 0px 0px 2px 0px #959ead;
 }
-
+.dotsSlick
+{
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    li
+    {
+        margin-right: 8px;
+        &:last-child
+        {
+            margin-right: 0;
+        }
+        button
+        {
+            background-color: $colorBlue;
+            color: $colorBlue;
+            max-width: 10px;
+            max-width: 10px;
+            height: 10px;
+            width: 10px;
+            overflow: hidden;
+            border: none;
+            outline: none;
+        }
+    }
+    .slick-active
+    {
+        button
+        {
+            background-color: #EF0000;
+            color: #EF0000;
+        }
+    }
+}
 @media screen and (max-width: 3500px)
 {
     section

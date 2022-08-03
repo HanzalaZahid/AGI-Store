@@ -10,3 +10,11 @@
 {
     font-family: open-sans, sans-serif;
 }
+
+@mixin largeHeading
+{
+    text-transform: uppercase;
+    @include bebas;
+    font-weight: 600;
+    font-size: 56px;
+}
