@@ -30,6 +30,7 @@ body > .body_content > section .section_wrapper .section_title {
   text-transform: uppercase;
   font-family: bebas-neue-pro-expanded, sans-serif;
   color: #0D2647;
+  font-weight: 600;
   font-size: 36px;
   padding: 36px 0px;
 }

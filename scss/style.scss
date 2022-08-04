@@ -34,6 +34,7 @@ body>.body_content>section
             text-transform: uppercase;
             @include bebas;
             color: $colorBlue;
+            font-weight: 600;
             font-size: 36px;
             padding: 36px 0px;
         }
