@@ -1,0 +1,152 @@
+@import "./mixins";
+@import "./variables";
+
+.checkout
+{
+    .section_wrapper
+    {
+        .checkout_step
+        {
+            $grey_checkout: #858997;
+            $darkgrey_checkout: #141821;
+            *
+            {
+                @include roboto;
+                font-size: 16px;
+            }
+            .head
+            {
+                display: flex;
+                justify-content: space-between;
+                .title
+                {
+                    color: $grey_checkout;
+                    font-weight: normal;
+                }
+                .progress
+                {
+                    display: flex;
+                    align-items: center;
+                    .step_icon
+                    {
+                        padding: 0px 16px;
+                        &:last-child{
+                            padding-right: 0;
+                        }
+
+                    }
+                    .line
+                    {
+                        width: 30px;
+                        border: 2px solid #E6E8EE;
+                    }
+                }
+            }
+            .step_body
+            {
+                table
+                {
+                    width: 100%;
+                    text-align: left;
+                    thead
+                    {
+                        *
+                        {
+                            color: $grey_checkout;
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                    tbody
+                    {
+                        border-top: 1px solid #EEEFF3;
+                        tr
+                        {
+                            border-bottom: 1px solid #EEEFF3;
+                            .product_info
+                            {
+                                color: $darkgrey_checkout;
+                                display: flex;
+                                align-items: center;
+                                .thumbnail
+                                {
+                                    height: 70px;
+                                    margin-right: 22px;
+                                    img
+                                    {
+                                        height: 100%;
+                                        object-fit: contain;
+                                        object-position: center;
+                                    }
+                                }
+                            }
+                            .title
+                            {
+                                span
+                                {
+                                    margin: 0px 5px;
+                                }
+                            }
+                            .product_quantity
+                            {
+                                position: relative;
+                                width: 1%;
+                                white-space: nowrap;
+                                input::-webkit-outer-spin-button,
+                                input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                                }
+
+                                /* Firefox */
+                                input[type=number] {
+                                -moz-appearance: textfield;
+                                }
+                                input, button
+                                {
+                                    border: none;
+                                    outline: none;
+                                    background: transparent;
+
+                                }
+                                input
+                                {
+                                    border: 1px solid #C3C6D1;
+                                    padding: 8px 55px;
+                                    color: $darkgrey_checkout;
+                                    font-size: 16px;
+                                    line-height: 1;
+                                    min-width: 1px;
+                                    height: 40px;
+                                    border-radius: 12px;
+                                    width: 132px;
+                                    text-align: center;
+                                }
+                                button
+                                {
+                                    font-size: 24px;
+                                    color: $grey_checkout;
+                                    position: absolute;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 12px;
+                                    // background-color: red;
+                                    &:last-child
+                                    {
+                                        right: 0px;
+                                        // top: 0px;
+                                    }
+                                }
+
+                            }
+                            .product_price
+                            {
+                                color: $darkgrey_checkout;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

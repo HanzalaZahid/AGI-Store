@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <!-- JS -->
+    <script src="./assets/js/incrementer.js" defer></script>
+    <!-- jquery -->
+    <script src="./assets/js/jquery.js"></script>
+    <!-- CDN -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Checkout</title>
+</head>
+<body>
+    <!-- HEADER GOES HERE -->
+    <!-- HEADER GOES HERE -->
+    <div class="body_content">
+        <section class="banner">
+            <div class="section_wrapper">
+                <h1 class="page_title">
+                    Check Out
+                </h1>
+            </div>
+        </section>
+        <section class="search">
+            <div class="section_wrapper">
+                <div class="search_container">
+                    <form action="" class="search_courses">
+                        <input type="text" name="searchCourse" id="searchCourse" placeholder="Search for Courses">
+                        <button type="submit" class="button_blue">SEARCH</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="checkout">
+            <div class="section_wrapper">
+                <div class="checkout_step cart">
+                    <div class="head">
+                        <h2 class="title">Shopping Cart</h2>
+                        <div class="progress">
+                            <div class="step_icon cart_icon">
+                                <img src="./assets/images/checkout/cart_red.png" alt="Cart Icon">
+                            </div>
+                            <div class="line"></div>
+                            <div class="step_icon shipping_icon">
+                                <img src="./assets/images/checkout/ship.png" alt="Ship Icon">
+                            </div>
+                            <div class="line"></div>
+                            <div class="step_icon payment_icon">
+                                <img src="./assets/images/checkout/pay.png" alt="Payment Icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step_body cart_items">
+                        <table class="list_table">
+                            <thead>
+                                <tr>
+                                    <th>Product Info</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="product_info">
+                                        <div class="thumbnail">
+                                            <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                        </div>
+                                        <div class="title">
+                                            Stock Refinishing<span>-</span>DVD Version
+                                        </div>
+                                    </td>
+                                    <td class="product_quantity">
+                                        <button class="qtyminus" aria-hidden="true">&minus;</button>
+			                            <input type="number"  name="qty" id="qty" min="1" max="50" step="1" value="1">
+			                            <button class="qtyplus" aria-hidden="true">&plus;</button>
+                                    </td>
+                                    <td class="product_price">$ 226.84</td>
+    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FOOTER GOES HERE -->
+    <!-- FOOTER GOES HERE -->
+</body>
+</html>
