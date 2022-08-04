@@ -63,6 +63,11 @@
                     >li
                     {
                         border-bottom: 1px solid #606060;
+                        &:last-child
+                        {
+                            border-bottom: none;
+                            margin-bottom: 32px;
+                        }
                         display: flex;
                         flex-direction: column;
                         >a

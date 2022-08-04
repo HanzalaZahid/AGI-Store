@@ -27,5 +27,40 @@ $(document).ready(
                 ]
             }
         );
+        $('.frequently_purchased .section_wrapper .product_slider').slick(
+          {
+              infinite: false,
+              slidesToShow: 3,
+              dots: false,
+              arrows: false,
+              initialSlide: 1,
+              centerMode: true,
+              centerPadding: '100px',
+              responsive: [
+                {
+                  breakpoint: 1390,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 870,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                },
+                {
+                  breakpoint: 580,
+                  settings: {
+                    slidesToShow: 1,
+                    centerMode: 'false',
+                    autoplay: true,
+                    variableWidth: true,
+                  }
+                },
+            ]
+          }
+        )
+
     }
 )
