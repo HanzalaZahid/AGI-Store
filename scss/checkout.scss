@@ -6,6 +6,14 @@ $darkgrey_checkout: #141821;
 {
     .section_wrapper
     {
+        .step-content
+        {
+            border: none!important;
+        }
+        .step-steps
+        {
+            display: none!important;
+        }
         padding-top: $sectionTopMargin;
         .checkout_step
         {

@@ -11,7 +11,10 @@
     <script src="./assets/js/incrementer.js" defer></script>
     <!-- jquery -->
     <script src="./assets/js/jquery.js"></script>
-
+    <!-- Plugins -->
+    <!-- jQuery Steps -->
+    <script src="./assets/plugins/jQuerySteps/dist/jquery-steps.js"></script>
+    <link rel="stylesheet" href="./assets/plugins/jQuerySteps/dist/jquery-steps.css">
     <!-- CDN -->
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -43,225 +46,235 @@
         </section>
         <section class="checkout">
             <div class="section_wrapper">
-                <div class="checkout_step cart">
-                    <div class="head">
-                        <h2 class="title">Shopping Cart</h2>
-                        <div class="progress">
-                            <div class="step_icon cart_icon">
-                                <img src="./assets/images/checkout/cart_red.png" alt="Cart Icon">
+                <div class="step-app" id="demo">
+                    <div class="step-app" id="demo">
+                        <ul class="step-steps">
+                          <li data-step-target="step1">Step 1</li>
+                          <li data-step-target="step2">Step 2</li>
+                          <li data-step-target="step3">Step 3</li>
+                        </ul>
+                    <div class="step-content">
+                        <div class="checkout_step cart step-tab-panel" data-step="step1">
+                            <div class="head">
+                                <h2 class="title">Shopping Cart</h2>
+                                <div class="progress">
+                                    <div class="step_icon cart_icon">
+                                        <img src="./assets/images/checkout/cart_red.png" alt="Cart Icon">
+                                    </div>
+                                    <div class="line first_line"></div>
+                                    <div class="step_icon shipping_icon">
+                                        <img src="./assets/images/checkout/ship.png" alt="Ship Icon">
+                                    </div>
+                                    <div class="line second_line"></div>
+                                    <div class="step_icon payment_icon">
+                                        <img src="./assets/images/checkout/pay.png" alt="Payment Icon">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="line first_line"></div>
-                            <div class="step_icon shipping_icon">
-                                <img src="./assets/images/checkout/ship.png" alt="Ship Icon">
+                            <div class="step_body cart_items">
+                                <table class="list_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Info</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product_info">
+                                                <div class="thumbnail">
+                                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                                </div>
+                                                <div class="title">
+                                                    Stock Refinishing<span>-</span>DVD Version
+                                                </div>
+                                            </td>
+                                            <td class="product_quantity">
+                                                <div class="quantity_number">
+                                                    <button class="qtyminus" aria-hidden="true">&minus;</button>
+                                                    <input type="number"  name="qty" id="qty" min="1" max="50" step="1" value="1">
+                                                    <button class="qtyplus" aria-hidden="true">&plus;</button>
+                                                </div>
+                                            </td>
+                                            <td class="product_price">$ 226.84</td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td class="product_info">
+                                                <div class="thumbnail">
+                                                    <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                                </div>
+                                                <div class="title">
+                                                    Stock Refinishing<span>-</span>Online Version
+                                                </div>
+                                            </td>
+                                            <td class="product_quantity">
+                                                <div class="quantity_number">
+                                                    <button class="qtyminus" aria-hidden="true">&minus;</button>
+                                                    <input type="number"  name="qty" id="qty" min="1" max="50" step="1" value="1">
+                                                    <button class="qtyplus" aria-hidden="true">&plus;</button>
+                                                </div>
+                                            </td>
+                                            <td class="product_price">$ 549.84</td>
+            
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="line second_line"></div>
-                            <div class="step_icon payment_icon">
-                                <img src="./assets/images/checkout/pay.png" alt="Payment Icon">
+                            <div class="foot">
+                                <div class="left">
+                                    <button data-step-action="next" class="button_red button_redirect button_shopping">Go to Shipping</button>
+                                </div>
+                                <div class="right">
+                                    <div class="label">Subtotal:</div>
+                                    <div class="total_items"><span>6</span>Items</div>
+                                    <div class="total_price">$<span>434.43</span></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="step_body cart_items">
-                        <table class="list_table">
-                            <thead>
-                                <tr>
-                                    <th>Product Info</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="product_info">
-                                        <div class="thumbnail">
-                                            <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                        <div class="checkout_step shipping step-tab-panel" data-step="step2">
+                            <div class="head">
+                                <h2 class="title">Shipping Info</h2>
+                                <div class="progress">
+                                    <div class="step_icon cart_icon">
+                                        <img src="./assets/images/checkout/cart_blue.png" alt="Cart Icon">
+                                    </div>
+                                    <div class="line first_line"></div>
+                                    <div class="step_icon shipping_icon">
+                                        <img src="./assets/images/checkout/ship_red.png" alt="Ship Icon">
+                                    </div>
+                                    <div class="line second_line"></div>
+                                    <div class="step_icon payment_icon">
+                                        <img src="./assets/images/checkout/pay.png" alt="Payment Icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step_body">
+                                <form action="">
+                                    <div class="container">
+                                        <div class="form_group verified">
+                                            <input type="text" name="first_name" placeholder="First Name">
+                                            <i class="bi bi-check-circle-fill"></i>
                                         </div>
-                                        <div class="title">
-                                            Stock Refinishing<span>-</span>DVD Version
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <input type="text" name="last_name" placeholder="Last Name">
+                                            <i class="bi bi-check-circle-fill"></i>
                                         </div>
-                                    </td>
-                                    <td class="product_quantity">
-                                        <div class="quantity_number">
-                                            <button class="qtyminus" aria-hidden="true">&minus;</button>
-                                            <input type="number"  name="qty" id="qty" min="1" max="50" step="1" value="1">
-                                            <button class="qtyplus" aria-hidden="true">&plus;</button>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <input type="text" name="phone" placeholder="Phone">
+                                            <i class="bi bi-check-circle-fill"></i>
                                         </div>
-                                    </td>
-                                    <td class="product_price">$ 226.84</td>
-    
-                                </tr>
-                                <tr>
-                                    <td class="product_info">
-                                        <div class="thumbnail">
-                                            <img src="./assets/images/courseThumb.png" alt="Course Thumbnail">
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <input type="email" name="email" placeholder="Email">
+                                            <i class="bi bi-check-circle-fill"></i>
                                         </div>
-                                        <div class="title">
-                                            Stock Refinishing<span>-</span>Online Version
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <select name="ship_country" id="ship_country">
+                                                <option value="0">United Stated</option>
+                                                <option value="1">Pakistan</option>
+                                                <option value="2">South Africa</option>
+                                            </select>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <i class="bi bi-chevron-down"></i>
                                         </div>
-                                    </td>
-                                    <td class="product_quantity">
-                                        <div class="quantity_number">
-                                            <button class="qtyminus" aria-hidden="true">&minus;</button>
-                                            <input type="number"  name="qty" id="qty" min="1" max="50" step="1" value="1">
-                                            <button class="qtyplus" aria-hidden="true">&plus;</button>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <select name="ship_state" id="ship_state">
+                                                <option value="0">State</option>
+                                                <option value="1">Silanwali</option>
+                                                <option value="2">Patoki</option>
+                                            </select>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <i class="bi bi-chevron-down"></i>
                                         </div>
-                                    </td>
-                                    <td class="product_price">$ 549.84</td>
-    
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="foot">
-                        <div class="left">
-                            <button class="button_red button_redirect button_shopping">Go to Shipping</button>
-                        </div>
-                        <div class="right">
-                            <div class="label">Subtotal:</div>
-                            <div class="total_items"><span>6</span>Items</div>
-                            <div class="total_price">$<span>434.43</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout_step shipping">
-                    <div class="head">
-                        <h2 class="title">Shipping Info</h2>
-                        <div class="progress">
-                            <div class="step_icon cart_icon">
-                                <img src="./assets/images/checkout/cart_blue.png" alt="Cart Icon">
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group form_group_large">
+                                            <input type="text" class="ship_address" name="ship_address" placeholder="Address">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group form_group_small">
+                                            <input type="text" class="ship_zip" name="ship_zip" placeholder="Zip Code">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="line first_line"></div>
-                            <div class="step_icon shipping_icon">
-                                <img src="./assets/images/checkout/ship_red.png" alt="Ship Icon">
-                            </div>
-                            <div class="line second_line"></div>
-                            <div class="step_icon payment_icon">
-                                <img src="./assets/images/checkout/pay.png" alt="Payment Icon">
+                            <div class="foot">
+                                <div class="left">
+                                    <button data-step-action="next" class="button_red button_redirect button_shopping">Go to Payment</button>
+                                    <button data-step-action="prev" class="button_go_back">Go Back</button>
+                                </div>
+                                <div class="right">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="step_body">
-                        <form action="">
-                            <div class="container">
-                                <div class="form_group verified">
-                                    <input type="text" name="first_name" placeholder="First Name">
-                                    <i class="bi bi-check-circle-fill"></i>
+                        <div class="checkout_step payment step-tab-panel" data-step="step3">
+                            <div class="head">
+                                <h2 class="title">Payment</h2>
+                                <div class="progress">
+                                    <div class="step_icon cart_icon">
+                                        <img src="./assets/images/checkout/cart_blue.png" alt="Cart Icon">
+                                    </div>
+                                    <div class="line first_line"></div>
+                                    <div class="step_icon shipping_icon">
+                                        <img src="./assets/images/checkout/ship_blue.png" alt="Ship Icon">
+                                    </div>
+                                    <div class="line second_line"></div>
+                                    <div class="step_icon payment_icon">
+                                        <img src="./assets/images/checkout/pay_red.png" alt="Payment Icon">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <input type="text" name="last_name" placeholder="Last Name">
-                                    <i class="bi bi-check-circle-fill"></i>
+                            <div class="step_body">
+                                <form action="">
+                                    <div class="container">
+                                        <div class="form_group verified">
+                                            <input type="number" name="card_number" placeholder="Card Number">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="form_group">
+                                            <input type="text" name="card_name" placeholder="Holder Name">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                    <div class="container card_date_cvc">
+                                        <div class="form_group">
+                                            <input type="text" name="card_date" placeholder="Exp">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                        <div class="form_group">
+                                            <input type="text" name="card_cvc" placeholder="CVC">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="card_visuals">
+                                    <div class="meta_data">CARD</div>
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <input type="text" name="phone" placeholder="Phone">
-                                    <i class="bi bi-check-circle-fill"></i>
+                            <div class="foot">
+                                <div class="left">
+                                    <button data-step-action="finish" class="button_red button_redirect button_shopping">Finish Order</button>
+                                    <button data-step-action="prev" class="button_go_back">Go Back</button>
+                                </div>
+                                <div class="right">
                                 </div>
                             </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <input type="email" name="email" placeholder="Email">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <select name="ship_country" id="ship_country">
-                                        <option value="0">United Stated</option>
-                                        <option value="1">Pakistan</option>
-                                        <option value="2">South Africa</option>
-                                    </select>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <select name="ship_state" id="ship_state">
-                                        <option value="0">State</option>
-                                        <option value="1">Silanwali</option>
-                                        <option value="2">Patoki</option>
-                                    </select>
-                                    <i class="bi bi-check-circle-fill"></i>
-                                    <i class="bi bi-chevron-down"></i>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="form_group form_group_large">
-                                    <input type="text" class="ship_address" name="ship_address" placeholder="Address">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="form_group form_group_small">
-                                    <input type="text" class="ship_zip" name="ship_zip" placeholder="Zip Code">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="foot">
-                        <div class="left">
-                            <button class="button_red button_redirect button_shopping">Go to Payment</button>
-                            <button class="button_go_back">Go Back</button>
-                        </div>
-                        <div class="right">
-                        </div>
-                    </div>
-                </div>
-                <div class="checkout_step payment">
-                    <div class="head">
-                        <h2 class="title">Payment</h2>
-                        <div class="progress">
-                            <div class="step_icon cart_icon">
-                                <img src="./assets/images/checkout/cart_blue.png" alt="Cart Icon">
-                            </div>
-                            <div class="line first_line"></div>
-                            <div class="step_icon shipping_icon">
-                                <img src="./assets/images/checkout/ship_blue.png" alt="Ship Icon">
-                            </div>
-                            <div class="line second_line"></div>
-                            <div class="step_icon payment_icon">
-                                <img src="./assets/images/checkout/pay_red.png" alt="Payment Icon">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step_body">
-                        <form action="">
-                            <div class="container">
-                                <div class="form_group verified">
-                                    <input type="number" name="card_number" placeholder="Card Number">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="form_group">
-                                    <input type="text" name="card_name" placeholder="Holder Name">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                            <div class="container card_date_cvc">
-                                <div class="form_group">
-                                    <input type="text" name="card_date" placeholder="Exp">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                                <div class="form_group">
-                                    <input type="text" name="card_cvc" placeholder="CVC">
-                                    <i class="bi bi-check-circle-fill"></i>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="card_visuals">
-                            <div class="meta_data">CARD</div>
-                        </div>
-                    </div>
-                    <div class="foot">
-                        <div class="left">
-                            <button class="button_red button_redirect button_shopping">Finish Order</button>
-                            <button class="button_go_back">Go Back</button>
-                        </div>
-                        <div class="right">
                         </div>
                     </div>
                 </div>
@@ -272,7 +285,12 @@
     <!-- FOOTER GOES HERE -->
 
     <script>
-        $('select').selectmenu();
+        $('#demo').steps(
+            {
+                footerSelector: '.foot',
+                
+            }
+        );
     </script>
 </body>
 </html>
